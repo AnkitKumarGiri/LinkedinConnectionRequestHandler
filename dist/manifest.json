@@ -1,0 +1,14 @@
+{
+    "name": "LinkedIn Connection Request Handler",
+    "description": "Automate accepting or ignoring a connection request on linkedin",
+    "version": "1.0",
+    "manifest_version": 3,
+    "action": {
+        "default_popup": "index.html"
+    },
+    "content_scripts": [{
+        "css": ["styles.css"],
+        "js": ["content.js"],
+        "matches": ["https://www.linkedin.com/mynetwork/invitation-manager/"]
+    }]
+}
