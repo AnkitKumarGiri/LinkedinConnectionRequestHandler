@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="button.css">
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
         <p style="font-size: 1em; text-align: center;">
-            <button class = "automate_button">
-                <span>
-                    Automate handling of connection requests
-                </span>
-            </button>
+            <form class="form-data" autocomplete="on">
+                <div class="enter-thresh">
+                  Enter minimum number of mutual connections to accept request:
+                </div>
+                <div>
+                  <input type="number" class="cnt-thresh" />
+                </div>
+                <button class="automate-btn">Handle requests</button>
+              </form>
         </p>
+        <script src="main.js"></script>
     </body>
 </html>
