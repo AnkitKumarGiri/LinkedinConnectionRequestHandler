@@ -1,6 +1,10 @@
 # LinkedinConnectionRequestHandler
 A chrome extension built in HTML,CSS and JS to automate accepting or ignoring a connection request on linkedin
 
+## Video demo
+
+![](./demo.gif)
+
 ## Getting started
 
 **To get started, follow the instructions below**
