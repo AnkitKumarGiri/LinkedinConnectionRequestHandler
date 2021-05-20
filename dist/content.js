@@ -1,10 +1,11 @@
 
-chrome.storage.sync.get("conn_cnt_thresh", ({ conn_cnt_thresh }) => {
+chrome.storage.sync.get(["conn_cnt_thresh", "ignore_request_flag"], ({ conn_cnt_thresh ,ignore_request_flag }) => {
     console.log(conn_cnt_thresh);
+    console.log(ignore_request_flag);
 
     // select all requests
     var all_requests = document.getElementsByClassName("invitation-card artdeco-list__item");
-    
+
     for (const request of all_requests){
         
         // find number of mutual connections
@@ -24,7 +25,7 @@ chrome.storage.sync.get("conn_cnt_thresh", ({ conn_cnt_thresh }) => {
         if (mutual_conn_count >= conn_cnt_thresh){
             action_buttons[1].click();
         }
-        else{
+        else if (ignore_request_flag == true){
             action_buttons[0].click();
         }
     }
